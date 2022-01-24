@@ -1,0 +1,593 @@
+@media (max-width: 1820px) {
+  .container {
+    padding-right: 33px;
+    padding-left: 50px;
+  }
+
+  .text-us-section { margin-right: 0; }
+
+  .about-us__wrapper { flex-direction: column; }
+
+  .about-us__block {
+    width: 100%;
+    min-height: 640px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    background-position: center 20%;
+  }
+
+  .description { width: 100%; }
+
+  .description__text {
+    width: 60%;
+    margin-right: auto;
+  }
+
+  .about-us__list-item {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about-us-top,
+  .about-us-bottom { background-position: 4%; }
+
+  .block__wrapper {
+    width: 48%;
+    margin-right: 8%;
+  }
+
+  .block__picture {
+    width: 48%;
+  }
+
+  .block__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer__left { margin-right: auto; }
+
+  .footer__right { display: none; }
+}
+
+@media (max-width: 1285px) {
+  .header {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .burger {
+    display: block;
+    margin-right: auto;
+  }
+
+  .nav__list { display: none; }
+
+  .hero__container {
+    padding-top: 162px;
+    padding-bottom: 160px;
+    background-image: url(../assets/img/Hero-1024.jpg);
+  }
+
+  .hero__title {
+    margin-bottom: 16px;
+    font-size: 60px;
+    line-height: 73px;
+  }
+
+  .hero__text {
+    max-width: 660px;
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .about-us { padding-top: 80px; }
+
+  .about-us__title { margin-bottom: 10px; }
+
+  .about-us__text { margin-bottom: 60px; }
+
+  .description__text { max-width: 454px; }
+
+  .about-us__list-item {
+    padding-bottom: 40px;
+    padding-left: 315px;
+  }
+
+  .about-us__list-item-text {
+    max-width: 452px;
+    line-height: 35px;
+  }
+
+  .about-us-top,
+  .about-us-bottom { background-position: 10% 48%; }
+
+  .consult { padding-top: 80px; }
+
+  .block__wrapper { margin-right: 50px }
+
+  .block__text-title { margin-bottom: 5px; }
+
+  .block__text {
+    max-width: 437px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .block__picture { height: 698px; }
+
+  .faq {
+    padding-top: 80px;
+    padding-bottom: 84px;
+  }
+
+  .faq__title { margin-bottom: 32px; }
+
+  .faq__list-item { padding-top: 29px; }
+
+  .faq__list-item-text {
+    max-width: 756px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .footer__left { margin-right: 130px; }
+
+  .footer__logo { margin-bottom: 20px; }
+
+  .form__input {
+    max-width: 495px;
+  }
+
+  .form__btn { padding: 18px 35px; }
+
+}
+
+@media (max-width: 1020px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__left { padding-top: 0; }
+
+  .footer__nav { margin-bottom: 0; }
+
+  .footer__logo { margin-bottom: 10px; }
+
+  .footer__nav-list {display: none; }
+
+  .text-us-section {
+    order: -1;
+    margin-bottom: 50px;
+  }
+
+  .footer__left { margin-right: 0; }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+
+  .hero__container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .hero__title {
+    max-width: 590px;
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .hero__text {
+    max-width: 590px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about-us__block { min-height: 650px; }
+
+  .description {
+    padding-top: 34px;
+    padding-right: 40px;
+    padding-bottom: 34px;
+    padding-left: 40px;
+  }
+
+  .description__text {
+    width: 366px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .about-us__list-item {
+    padding-top: 35px;
+    padding-right: 44px;
+    padding-bottom: 35px;
+    padding-left: 170px;
+  }
+
+  .about-us__list-item-text {
+    margin-bottom: 0;
+    line-height: 33px;
+  }
+
+  .about-us-top,
+  .about-us-bottom {
+    background-size: 114px 99px;
+    background-position: 4% 50%;
+  }
+
+  .consult__list-item:not(:last-child) { margin-right: auto; }
+
+  .consult__list-item:last-child { margin-right: 0; }
+
+  .block { flex-direction: column; }
+
+  .block__wrapper { width: 100%; }
+
+  .block__picture {
+    width: 100%;
+    height: 284px;
+    order: -1;
+    margin-bottom: 35px;
+  }
+
+  .block__img { margin-right: 0; padding-top: 0; }
+
+  .block__text { max-width: 100%; }
+
+  .faq__list-item-text { max-width: 570px; }
+}
+
+@media (max-width: 768px) {
+  .about-us-top,
+  .about-us-bottom { background-position: 7% 50%; }
+
+  .consult__list-item:not(:last-child) { margin-right: 155px; }
+
+  .footer__container { align-items: baseline; }
+
+}
+
+@media (max-width: 765px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .hero__container {
+    padding-top: 60px;
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  .hero__text,
+  .hero__title {
+    max-width: calc(100% - 30px);
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .about-us__img {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .about-us__text { margin-bottom: 14px; }
+
+  .about-us__block {
+    min-height: 0;
+    background-image: none;
+  }
+
+  .description {
+    flex-direction: column;
+    align-items: baseline;
+    padding: 0;
+    color: #333;
+    background: none;
+  }
+
+  .description__text {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+    line-height: 28px;
+    font-weight: normal;
+  }
+
+  .description__link {
+    align-self: center;
+    color: var(--main-color);
+    transition: color .5s ease-in-out;
+  }
+
+  .description__link:hover { color: #fff; }
+
+  .consult__list-item:not(:last-child) { margin-right: auto; }
+
+  .faq__list-item-text {max-width: 75%; }
+
+  .footer__container { align-items: center; }
+
+  .form { align-items: center; }
+
+  .form__input {
+    max-width: 290px;
+    width: 100%;
+  }
+
+  .text-us-section { margin-bottom: 25px; }
+
+  .text-us-section__title { text-align: center; }
+
+  .form__block { flex-direction: column; }
+
+  .form__btn { margin-bottom: 25px; }
+
+  .checkbox { margin-bottom: 25px; }
+
+  hr {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 1px solid #595959;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero__container {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .hero__title,
+  .hero__text {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero__title {
+    max-width: 247px;
+    width: 100%;
+    margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .hero__text {
+    max-width: 247px;
+    width: 100%;
+    margin-bottom: 32px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .hero__link {
+    max-width: 162px;
+    padding: 12px 28px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .about-us { padding-top: 60px; }
+
+  .about-us__title {
+    margin-bottom: 22px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .about-us__text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .about-us__block { margin-bottom: 32px; }
+
+  .description__text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .description__link {
+    max-width: 162px;
+    align-self: flex-start;
+    padding: 10px 40px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .about-us__list-item {
+    border: none;
+    padding: 0;
+    padding-top: 56px;
+  }
+
+  .about-us-top,
+  .about-us-bottom {
+    background-position: 0% 0%;
+    background-size: 22% 20%;
+  }
+
+  .about-us-top {
+    background-image: url("../assets/svg/about-consult-top-320.svg");
+  }
+
+  .about-us-bottom {
+    background-image: url("../assets/svg/about-consul-bottom-320.svg");
+  }
+
+  .about-us__list-item span {
+    letter-spacing: -0.4px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about-us__list-item-text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .consult { padding-top: 56px; }
+
+  .consult__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .consult__list { margin-bottom: 12px; }
+
+  .consult__list-item-btn {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .block__text-title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .block__text {
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .block__link {
+    margin-right: 0;
+    padding: 10px 43px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .block__link-info {
+    margin-right: 4px;
+  }
+
+  .block__link-contract {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+
+  .block__picture {
+    margin-bottom: 20px;
+    height: 160px;
+  }
+
+  .faq {
+    padding-top: 60px;
+    padding-bottom: 56px;
+  }
+
+  .faq__title {
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .faq__list-item {
+    padding-top: 29px;
+    padding-bottom: 31px;
+  }
+
+  .faq__list-item-text {
+    max-width: 89%;
+    margin-right: auto;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .faq__list-item-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .faq__list-item-svg {
+    width: 21px;
+    height: 20px;
+  }
+
+  .footer {
+    padding-top: 32px;
+    padding-bottom: 28px;
+  }
+
+  .footer__container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .text-us-section {
+    width: 100%;
+    max-width: 290px;
+    margin-bottom: 16px;
+  }
+
+  .text-us-section__title {
+    margin-bottom: 20px;
+    padding-top: 0;
+    text-align: start;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .form { margin-bottom: 15px; }
+
+  .form__input {
+    width: 100%;
+    max-width: 244px;
+    font-size: 14px;
+  }
+
+  .textarea {
+    min-height: 117px;
+    margin-bottom: 25px;
+  }
+
+  .form__btn {
+    margin: 0 auto;
+    margin-bottom: 12px;
+    padding: 12px 30px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .checkbox { margin-bottom: 0; }
+
+  .footer__nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social {
+    margin: 0 auto;
+    padding-left: 12px;
+  }
+
+  .social__item { margin-right: 16px; }
+
+  .social__link { margin-right: 0; }
+
+  .social__link svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
