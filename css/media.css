@@ -143,6 +143,12 @@
 
   .block__picture { height: 698px; }
 
+  .step-2 { height: 537px; }
+
+  .step-3 {height: 665px;}
+
+  .step-4 { height: 507px; }
+
   .faq {
     padding-top: 80px;
     padding-bottom: 84px;
@@ -244,6 +250,10 @@
   .block { flex-direction: column; }
 
   .block__wrapper { width: 100%; }
+
+  .step-2,
+  .step-3,
+  .step-4 { height: 100%; }
 
   .block__picture {
     width: 100%;

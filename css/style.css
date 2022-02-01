@@ -502,6 +502,12 @@ body {
 
 .block { display: flex; }
 
+.tab-content { display: none; }
+
+.tab-content--active { display: flex; }
+
+.tabs__btn--active { color: var(--main-color); }
+
 .block__wrapper { margin-right: 142px; }
 
 .block__text-title {
