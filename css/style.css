@@ -74,7 +74,8 @@ body {
 }
 
 .container {
-  max-width: 1770px;
+  --container-width: 1770px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding-left: 75px;
   padding-right: 58px;
@@ -217,12 +218,10 @@ body {
 }
 
 .nav__list-item {
+  margin-right: 72px;
   font-weight: 600;
   font-size: 18px;
 }
-
-.nav__list-item { margin-right: 80px; }
-
 
 .nav__list-item-link { border: 2px solid transparent; }
 
@@ -255,6 +254,7 @@ body {
 }
 
 .nav__search-btn {
+  align-self: center;
   border: none;
   width: 25px;
   height: 25px;
@@ -279,14 +279,51 @@ body {
 .hero { color: var(--white-color); }
 
 .hero__container {
-  padding-right: 80px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 80px;
-  background-image: url(../assets/img/Hero.jpg);
+  min-width: 0;
   background-position: center center;
   background-size: cover;
 }
+
+.swiper {
+  display: relative;
+  min-height: 620px;
+}
+
+.swiper-container {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center center;
+}
+
+.text-box {
+  position: relative;
+  z-index: 1;
+  padding: 80px;
+  padding-top: 100px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal { bottom: 24px; }
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-bullet-active { background: #fff; }
 
 .hero__title {
   width: 837px;
@@ -326,9 +363,7 @@ body {
 .hero__link:active { background-color: #e1670e; }
 
 /* ABOUT-US SECTION */
-.about-us {
-  padding-top: 100px;
-}
+.about-us { padding-top: 100px; }
 
 .about-us__text {
   margin-top: 0;

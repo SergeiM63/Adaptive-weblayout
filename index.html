@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Евклид</title>
     <link type="image/png" sizes="16x16" rel="icon" href="./assets/favicon.png">
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
+    <script defer src="./js/jquery-3.6.0.min.js"></script>
     <script defer src="./js/swiper-bundle.min.js"></script>
     <script defer src="./js/main.js"></script>
   </head>
@@ -17,7 +19,7 @@
   <body>
     <h1 class="visually-hidden">Евклид проектные системы</h1>
     <div class="overlay"></div>
-    
+
     <header class="header">
       <div class="container header__container">
         <button class="burger" aria-label="Открыть меню">
@@ -30,7 +32,7 @@
             <img src="./assets/svg/logo.svg" alt="Logo"/>
           </picture>
         </a>
-        <nav class="nav">
+        <nav class="nav header__nav">
           <ul class="site-list nav__list">
             <li class="nav__list-item">
               <a class="site-link nav__list-item-link" href="#about-us-section">О нас</a>
@@ -48,57 +50,61 @@
               <a class="site-link nav__list-item-link" href="#">Контакты</a>
             </li>
           </ul>
-
-          <button class="btn nav__search-btn" type="button">
-            <svg
-              width="26"
-              height="26"
-              viewbox="0 0 26 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="19.5138"
-                y="18.5495"
-                width="8"
-                height="2"
-                transform="rotate(45 19.5138 18.5495)"
-                fill="#333333"
-              />
-              <circle
-                cx="11.5"
-                cy="11.5"
-                r="10.5"
-                stroke="#333333"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
         </nav>
+        <button class="btn nav__search-btn" type="button">
+          <svg
+            width="26"
+            height="26"
+            viewbox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="19.5138"
+              y="18.5495"
+              width="8"
+              height="2"
+              transform="rotate(45 19.5138 18.5495)"
+              fill="#333333"
+            />
+            <circle
+              cx="11.5"
+              cy="11.5"
+              r="10.5"
+              stroke="#333333"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="container">
-
-          <!-- <div class="swiper-container hero__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide" style="background-image: url('img/bg-1.jpg')"></div>
-              <div class="swiper-slide" style="background-image: url('img/bg-2.jpg')"></div>
-              <div class="swiper-slide" style="background-image: url('img/bg-3.jpg')"></div>
-            </div>
-          </div> -->
-
+        <div class="container ">
           <div class="hero__container">
-            <h2 class="hero__title">Проектные решения любой сложности</h2>
-            <p class="hero__text">
-              Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
-              остаются уделом проектантов
-            </p>
-            <a class="site-link hero__link" href="#">Заказать расчёт</a>
+
+              <div class="swiper">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(./assets/img/Hero.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(./assets/img/hero2.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(./assets/img/hero3.jpg)"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="text-box">
+                  <h2 class="hero__title">Проектные решения любой сложности</h2>
+                  <p class="hero__text">
+                    Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
+                    остаются уделом проектантов
+                  </p>
+                  <a class="site-link hero__link" href="#">Заказать расчёт</a>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
       </section>
 
       <section class="about-us" id="about-us-section">
@@ -211,7 +217,7 @@
       <section class="faq">
         <div class="container">
           <h2 class="section-title faq__title">Часто задаваемые вопросы</h2>
-          <ul class="site-list faq__list">
+          <ul class="site-list faq__list" id="accordion">
             <li class="faq__list-item">
               <h3 class="faq__list-item-text">
                 Из чего формируется конечная стоимость проекта?
