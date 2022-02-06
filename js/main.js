@@ -35,14 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------------------------------------
   // 3. Реализовать аккордеон в секции “часто задаваемые вопросы”.
   // -------------------------------------------------------------------------------------
-  // $(function() {
-  //   $( "#accordion" ).accordion({heightStyle: "content"});
+  // $( "#accordion" ).accordion({
+  //   header: "h3"
   // });
 
-  // $( function() {
-  //   $("#accordion").accordion({
-  //     collapsible: true});
-  // } );
+  // $( "#accordion" ).accordion({
+  //   heightStyle: "content"
+  // });
+
+  // $("#accordion").accordion({
+  //   collapsible: true
+  // });
 
   // -------------------------------------------------------------------------------------
   // 4. Реализовать открытие и закрытие бургер меню в мобильной и планшетной версиях сайта.
@@ -75,4 +78,25 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.classList.remove('overlay--active');
     });
   });
+
+  // -------------------------------------------------------------------------------------
+  // 5. Реализовать открытие и закрытие поля поиска по клику на кнопку-лупу.
+  // -------------------------------------------------------------------------------------
+  const searchBox = document.querySelector('.search');
+  const searchInput = document.querySelector('.search__input');
+  const searchOpenBtn = document.querySelector('.search__open');
+  const searchCloseBtn = document.querySelector('.search__close');
+  const windowWidth = window.screen.width;
+
+  // windowWidth <= 765 ? searchInput.style.width = '50%' : searchInput.style.width;
+  windowWidth <= 500 ? searchBox.style.top = '-10px' : searchBox.style.top;
+
+  searchOpenBtn.addEventListener('click', () => {
+    searchBox.classList.toggle('search--active');
+    searchInput.classList.toggle('search__input--active')
+    searchOpenBtn.classList.toggle('search__open--active');
+    searchCloseBtn.classList.toggle('visually-hidden');
+  });
+
+  searchCloseBtn.addEventListener('click', () => { searchInput.value = '' });
 });

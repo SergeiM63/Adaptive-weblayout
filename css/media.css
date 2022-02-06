@@ -4,6 +4,8 @@
     padding-left: 50px;
   }
 
+  .search { right: 33px }
+
   .text-us-section { margin-right: 0; }
 
   .about-us__wrapper { flex-direction: column; }
@@ -89,6 +91,8 @@
   }
 
   .nav__list-item { margin-bottom: 20px; }
+
+  .search { top: 0 }
 
   .swiper { min-height: 668px; }
 
@@ -300,6 +304,10 @@
     padding-left: 35px;
   }
 
+  .search { right: 15px; }
+
+  .search__input--active { width: 320px; }
+
   .hero__text,
   .hero__title {
     max-width: calc(100% - 30px);
@@ -376,6 +384,10 @@
 }
 
 @media (max-width: 540px) {
+  .search__input { font-size: 14px; }
+
+  .search__input--active { width: 165px; }
+
   .hero__title,
   .hero__text {
     margin-right: auto;
