@@ -222,8 +222,7 @@ body {
 }
 
 .nav__list-item {
-
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
 }
 
@@ -272,7 +271,6 @@ body {
   padding-top: 16px;
   padding-bottom: 12px;
   z-index: 110;
-  background-color: #fff;
 }
 
 .search__input {
@@ -315,6 +313,7 @@ body {
 .search--active {
   padding-right: 12px;
   padding-left: 32px;
+  background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .12);
 }
 
@@ -379,7 +378,7 @@ body {
   width: 837px;
   margin-top: 0;
   margin-bottom: 24px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 70px;
   line-height: 85px;
   letter-spacing: 1px;
@@ -507,7 +506,7 @@ body {
 
 .about-us__list-item-text {
   margin-top: 0;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 32px;
 }
@@ -646,6 +645,33 @@ body {
   padding-bottom: 100px;
 }
 
+.accordion__control {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordion__title {transition: color .3s ease-in-out;}
+
+.accordion__content {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+}
+
+.accordion__content.open {
+  display: block;
+  color: var(--dark-color);
+  opacity: 1;
+}
+
 .faq__title {
   margin-bottom: 42px;
   line-height: 59px;
@@ -653,12 +679,13 @@ body {
 
 .faq__list-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #cacaca;
   padding-top: 30px;
   padding-bottom: 29px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   transition: border .3s ease-in-out,
@@ -678,6 +705,15 @@ body {
   stroke: var(--white-color);
 }
 
+.faq__list-item:hover .faq__list-item-btn.open {
+  background-color: #ececec;
+  stroke: transparent;
+}
+
+.faq__list-item:hover .accordion__title { color: var(--main-color); }
+
+.faq__list-item:hover .accordion__title.open { color: var(--dark-color); }
+
 .faq__list-item:focus {
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
@@ -688,6 +724,12 @@ body {
 .faq__list-item:focus .faq__list-item-btn {
   background-color: var(--main-color);
   stroke: var(--white-color);
+}
+
+.faq__list-item.open {
+  border-top: 1px solid var(--dark-color);
+  border-bottom: 1px solid var(--dark-color);
+  color: var(--dark-color);
 }
 
 .faq__list-item-text {
@@ -707,8 +749,14 @@ body {
   height: 50px;
   background-color: #ececec;
   transition: background-color .3s ease-in-out,
-              stroke .3s ease-in-out;
+              stroke .3s ease-in-out,
+              transform .3s ease-in-out;
 }
+
+.faq__list-item-btn.open { transform: rotate(45deg); }
+
+.faq__list-item-btn.open:hover { background-color: #ececec; }
+
 /* FOOTER */
 .footer {
   padding-top: 40px;
@@ -736,7 +784,7 @@ body {
 
 .footer__nav-list-item {
   margin-bottom: 14px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }

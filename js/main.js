@@ -35,17 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------------------------------------
   // 3. Реализовать аккордеон в секции “часто задаваемые вопросы”.
   // -------------------------------------------------------------------------------------
-  // $( "#accordion" ).accordion({
-  //   header: "h3"
-  // });
+  const accordionListItem = document.querySelectorAll('.accordion');
 
-  // $( "#accordion" ).accordion({
-  //   heightStyle: "content"
-  // });
+  accordionListItem.forEach(listItem => {
+    const accorionTitle = listItem.querySelector('.accordion__title');
+    const accorionBtn = listItem.querySelector('.accordion__btn');
+    const accorionContent = listItem.querySelector('.accordion__content');
 
-  // $("#accordion").accordion({
-  //   collapsible: true
-  // });
+    listItem.addEventListener('click', () => {
+      listItem.classList.toggle('open');
+      accorionTitle.classList.toggle('open');
+      accorionBtn.classList.toggle('open');
+      accorionContent.classList.toggle('open');
+    });
+  });
 
   // -------------------------------------------------------------------------------------
   // 4. Реализовать открытие и закрытие бургер меню в мобильной и планшетной версиях сайта.
@@ -85,18 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBox = document.querySelector('.search');
   const searchInput = document.querySelector('.search__input');
   const searchOpenBtn = document.querySelector('.search__open');
-  const searchCloseBtn = document.querySelector('.search__close');
+  const searchResetBtn = document.querySelector('.search__reset');
   const windowWidth = window.screen.width;
 
-  // windowWidth <= 765 ? searchInput.style.width = '50%' : searchInput.style.width;
   windowWidth <= 500 ? searchBox.style.top = '-10px' : searchBox.style.top;
 
   searchOpenBtn.addEventListener('click', () => {
     searchBox.classList.toggle('search--active');
     searchInput.classList.toggle('search__input--active')
     searchOpenBtn.classList.toggle('search__open--active');
-    searchCloseBtn.classList.toggle('visually-hidden');
+    searchResetBtn.classList.toggle('visually-hidden');
   });
 
-  searchCloseBtn.addEventListener('click', () => { searchInput.value = '' });
+  searchResetBtn.addEventListener('click', () => { searchInput.value = '' });
 });
