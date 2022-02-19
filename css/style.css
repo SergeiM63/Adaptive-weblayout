@@ -42,6 +42,11 @@ body {
   line-height: 59px;
 }
 
+.section-title:focus {
+    outline: 2px solid var(--main-color);
+    outline-offset: 5px;
+}
+
 .site-list {
   margin: 0;
   padding: 0;
@@ -60,6 +65,7 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  outline: transparent;
 }
 
 .visually-hidden {
@@ -273,6 +279,13 @@ body {
   z-index: 110;
 }
 
+.search--active {
+  padding-right: 12px;
+  padding-left: 32px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .12);
+}
+
 .search__input {
   width: 0px;
   border: none;
@@ -284,6 +297,11 @@ body {
   line-height: 22px;
   background-color: transparent ;
   transition: width .3s ease-in-out;
+}
+
+.search__input--active {
+  width: 412px;
+  margin-right: 14px;
 }
 
 .search__input:focus { border-bottom-color: var(--main-color); }
@@ -310,17 +328,9 @@ body {
   outline-offset: 5px;
 }
 
-.search--active {
-  padding-right: 12px;
-  padding-left: 32px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, .12);
-}
+.search__reset { display: none; }
 
-.search__input--active {
-  width: 412px;
-  margin-right: 14px;
-}
+.search__reset--active { display: block; }
 
 .search__open--active { margin-right: 18px; }
 
@@ -393,6 +403,11 @@ body {
   line-height: 29px;
 }
 
+.hero__text:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 5px;
+}
+
 .hero__link {
   max-width: 280px;
   padding: 19px 38px;
@@ -407,7 +422,10 @@ body {
 
 .hero__link:hover { background-color: rgba(255, 153, 0, .7); }
 
-.hero__link:focus { background-color: rgba(255, 153, 0, .7); }
+.hero__link:focus {
+  outline: transparent;
+  background-color: rgba(255, 153, 0, .7);
+}
 
 .hero__link:active { background-color: #e1670e; }
 
@@ -421,6 +439,11 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
+}
+
+.about-us__text:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 5px;
 }
 
 .about-us__wrapper { display: flex; }
@@ -459,6 +482,11 @@ body {
   line-height: 32px;
 }
 
+.description__text:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 5px;
+}
+
 .description__link {
   padding: 19px 35px;
   border: 3px solid var(--main-color);
@@ -472,7 +500,7 @@ body {
 .description__link:hover { background-color: var(--main-color); }
 
 .description__link:focus {
-  outline-color: var(--main-color);
+  outline: transparent;
   background-color: var(--main-color);
 }
 
@@ -511,6 +539,11 @@ body {
   line-height: 32px;
 }
 
+.about-us__list-item-text:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 5px;
+}
+
 .about-us-top {
   background-image: url("../assets/svg/about-consult-top.svg");
   background-position: 9% 48%;
@@ -532,6 +565,11 @@ body {
 }
 
 .consult__list-item { margin-right: 85px; }
+
+.consult__list-item:focus-within {
+  outline: 2px solid var(--main-color);
+  outline-offset: 5px;
+}
 
 .consult__list-item-btn {
   display: inline-block;
@@ -566,11 +604,21 @@ body {
   line-height: 40px;
 }
 
+.block__text-title:focus {
+  outline-color: var(--main-color);
+  outline-offset: 5px;
+}
+
 .block__text {
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 16px;
   line-height: 32px;
+}
+
+.block__text:focus {
+  outline-color: var(--main-color);
+  outline-offset: 5px;
 }
 
 .block__link {
@@ -655,6 +703,15 @@ body {
   cursor: pointer;
 }
 
+.accordion__control:focus-visible {
+  color: var(--main-color);
+  outline: transparent;
+}
+
+.accordion__control:focus-visible .open{
+  color: var(--dark-color)
+}
+
 .accordion__title {transition: color .3s ease-in-out;}
 
 .accordion__content {
@@ -671,6 +728,11 @@ body {
 .accordion__content.open {
   color: var(--dark-color);
   opacity: 1;
+}
+
+.accordion__content:focus {
+  outline-color: var(--main-color);
+  outline-offset: 5px;
 }
 
 .faq__title {
@@ -715,16 +777,21 @@ body {
 
 .faq__list-item:hover .accordion__title.open { color: var(--dark-color); }
 
-.faq__list-item:focus {
+.faq__list-item:focus-within {
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
   outline: none;
   color: var(--main-color);
 }
 
-.faq__list-item:focus .faq__list-item-btn {
+.faq__list-item:focus-within .faq__list-item-btn {
   background-color: var(--main-color);
   stroke: var(--white-color);
+}
+
+.faq__list-item:focus-within .faq__list-item-btn.open {
+  background-color: #ececec;
+  stroke: transparent;
 }
 
 .faq__list-item.open {
@@ -930,4 +997,9 @@ hr { display: none; }
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 12px;
+}
+
+.footer__right-text:focus {
+  outline-color: var(--main-color);
+  outline-offset: 5px;
 }

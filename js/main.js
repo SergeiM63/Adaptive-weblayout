@@ -6,10 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     autoplay: { delay: 4000 },
     loop: true,
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
+    pagination: { el: '.swiper-pagination'}
   });
 
   // -------------------------------------------------------------------------------------
@@ -22,13 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
     tabsBtn.addEventListener('click', event => {
       tabsButtons.forEach(tabsBtn => tabsBtn.classList.remove('tabs__btn--active'));
       const path = event.currentTarget.dataset.path;
+      const content = document.querySelector(`[data-target="${path}"]`);
+      const contentTitle = content.querySelector('.block__text-title');
 
       contentBlocks.forEach(tabContent => {
         tabContent.classList.remove('tab-content--active');
       });
 
       tabsBtn.classList.add('tabs__btn--active');
-      document.querySelector(`[data-target="${path}"]`).classList.add('tab-content--active');
+      content.classList.add('tab-content--active');
+      contentTitle.focus();
     });
   });
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const accordionBtn = listItem.querySelector('.accordion__btn');
     const accordionContent = listItem.querySelector('.accordion__content');
     const accordionControl = listItem.querySelector('.accordion__control');
-    
+
     listItem.addEventListener('click', (event) => {
       const self = event.currentTarget;
 
@@ -52,13 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
       accordionContent.classList.toggle('open');
 
       if (self.classList.contains('open')) {
-      accordionControl.setAttribute('aria-expanded', true);
-      accordionContent.setAttribute('aria-hidden', false);
-      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        accordionControl.setAttribute('aria-expanded', true);
+        accordionContent.setAttribute('aria-hidden', false);
+        accordionContent.setAttribute('tabindex', '0');
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+
       } else {
-      accordionControl.setAttribute('aria-expanded', false);
-      accordionContent.setAttribute('aria-hidden', true);
-      accordionContent.style.maxHeight = null;
+        accordionControl.setAttribute('aria-expanded', false);
+        accordionContent.setAttribute('aria-hidden', true);
+        accordionContent.setAttribute('tabindex', '-1');
+        accordionContent.style.maxHeight = null;
       }
     });
   });
@@ -109,8 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
   searchOpenBtn.addEventListener('click', () => {
     searchBox.classList.toggle('search--active');
     searchInput.classList.toggle('search__input--active')
+
+    if (  searchInput.classList.contains('search__input--active') ) {
+      searchInput.setAttribute('tabindex', '0');
+      searchInput.setAttribute('aria-hidden', false);
+      searchInput.focus();
+      searchOpenBtn.setAttribute('aria-label', 'Закрыть Поиск');
+    } else {
+      searchInput.setAttribute('tabindex', '-1');
+      searchInput.setAttribute('aria-hidden', true);
+      searchOpenBtn.setAttribute('aria-label', 'Отрыть Поиск');
+    }
+
     searchOpenBtn.classList.toggle('search__open--active');
-    searchResetBtn.classList.toggle('visually-hidden');
+    searchResetBtn.classList.toggle('search__reset--active');
   });
 
   searchResetBtn.addEventListener('click', () => { searchInput.value = '' });
