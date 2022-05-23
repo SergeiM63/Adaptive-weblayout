@@ -1,6 +1,6 @@
 # adaptive-weblayout
 
-## Adaptive WEB site with using flexbox and JavaScript
+## Adaptive WEB site HTML/CSS/JS with using Flexbox
 
 Adaptive for devices from 320px to 1920px
 
