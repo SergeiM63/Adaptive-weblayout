@@ -10,4 +10,4 @@ Adaptive for devices from 320px to 1920px
 4. Tabs (vanilla JavaScript)
 5. Accordion (vanilla JavaScript)
 
-[Click to open](https://sergeim63.github.io/adaptive-weblayout/)
+[Click to open](https://sergeim63.github.io/Adaptive-weblayout/)
